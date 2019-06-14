@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 
 public final class FindPathInputReaderFile extends StdFindPathInputStreamReader {
 
-    public FindPathInputReaderFile(String fileName) throws FileNotFoundException {
-        super(new FileInputStream(fileName));
-    }
+  public FindPathInputReaderFile(String fileName) throws FileNotFoundException {
+    super(new FileInputStream(fileName));
+  }
 }

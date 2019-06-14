@@ -1,13 +1,13 @@
 package pathfinder.io;
 
+import java.io.InputStream;
 import pathfinder.domain.Maze;
 
-import java.io.InputStream;
-
 public interface MazeReader {
-    Maze readMaze();
 
-    static MazeReader fromInputStream(InputStream inputStream) {
-        return new StdFindPathInputStreamReader(inputStream);
-    }
+  Maze readMaze();
+
+  static MazeReader fromInputStream(InputStream inputStream) {
+    return new StdFindPathInputStreamReader(inputStream);
+  }
 }

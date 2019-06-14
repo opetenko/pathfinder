@@ -1,12 +1,11 @@
 package pathfinder.io;
 
-import pathfinder.domain.builder.ElementFactory;
-
 import java.io.InputStream;
+import pathfinder.domain.builder.ElementFactory;
 
 class StdFindPathInputStreamReader extends AbstractFindPathInputReader {
 
-    protected StdFindPathInputStreamReader(InputStream inputStream) {
-        super(inputStream, new ElementFactory());
-    }
+  protected StdFindPathInputStreamReader(InputStream inputStream) {
+    super(inputStream, new ElementFactory());
+  }
 }
