@@ -29,4 +29,8 @@ public class Cell {
     public boolean isOpen(){
         return element.isOpen();
     }
+
+    public boolean isTarget() {
+        return element.isTarget();
+    }
 }

@@ -6,4 +6,8 @@ public enum Element {
     public boolean isOpen() {
         return this != BLOCKED && this != START;
     }
+
+    public boolean isTarget() {
+        return this == TARGET;
+    }
 }
