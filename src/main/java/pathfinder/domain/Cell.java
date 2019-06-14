@@ -1,14 +1,32 @@
 package pathfinder.domain;
 
+import java.util.List;
+
 public class Cell {
 
-  private final int x;
-  private final int y;
-  private final Element element;
+    private final Position position;
+    private final Element element;
+    private final List<Position> neighbours;
 
-  public Cell(int x, int y, Element element) {
-    this.x = x;
-    this.y = y;
-    this.element = element;
-  }
+    public Cell(Position position, Element element, List<Position> neighbours) {
+        this.position = position;
+        this.element = element;
+        this.neighbours = neighbours;
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public Element getElement() {
+        return element;
+    }
+
+    public List<Position> getNeighbours() {
+        return neighbours;
+    }
+
+    public boolean isOpen(){
+        return element.isOpen();
+    }
 }
