@@ -1,8 +1,9 @@
 package pathfinder.solver;
 
+import static pathfinder.solver.path.PathConstruction.tracePath;
+
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
 import pathfinder.domain.Cell;
 import pathfinder.domain.Maze;
@@ -38,23 +39,5 @@ public class DfsPathFinder implements PathFinder {
         }
       }
     }
-  }
-
-  private List<Direction> tracePath(Maze maze, HashMap<Position, Position> pathTo) {
-    LinkedList<Position> path = new LinkedList<>();
-    for (Position cur = maze.getTarget().getPosition(); cur != maze.getStart().getPosition();
-        cur = pathTo.get(cur)) {
-      path.push(cur);
-    }
-    path.push(maze.getStart().getPosition());
-    return mapToDirections(path);
-  }
-
-  private List<Direction> mapToDirections(LinkedList<Position> path) {
-    LinkedList<Direction> directions = new LinkedList<>();
-    for (int i = 1; i < path.size(); i++) {
-      directions.add(Direction.describeDirection(path.get(i - 1), path.get(i)));
-    }
-    return directions;
   }
 }
