@@ -13,6 +13,7 @@ import org.openjdk.jmh.annotations.State;
 import pathfinder.domain.Maze;
 import pathfinder.io.MazeReader;
 import pathfinder.solver.BfsPathFinder;
+import pathfinder.solver.DfsConcurrentPathFinder;
 import pathfinder.solver.DfsPathFinder;
 import pathfinder.solver.path.Direction;
 
@@ -37,5 +38,10 @@ public class PathFinderBenchmarkTest {
   @Benchmark
   public List<Direction> bfsSearch(MazeState state) {
     return new BfsPathFinder().findPath(state.maze);
+  }
+
+  @Benchmark
+  public List<Direction> dfsConcurrentSearch(MazeState state) {
+    return new DfsConcurrentPathFinder().findPath(state.maze);
   }
 }
