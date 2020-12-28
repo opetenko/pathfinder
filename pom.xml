@@ -11,6 +11,9 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.build.targetEncoding>UTF-8</project.build.targetEncoding>
+  <sonar.projectKey>opetenko_pathfinder</sonar.projectKey>
+  <sonar.organization>opetenko</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
 
   <build>
